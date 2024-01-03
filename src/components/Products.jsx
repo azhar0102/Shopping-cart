@@ -2,6 +2,9 @@ import { useLoaderData } from "react-router-dom";
 import { add } from "./cartSlice";
 import { useDispatch } from "react-redux";
 import { Carousel } from "@material-tailwind/react";
+import electronics from "../assets/sale-electronics-banner-background-free-vector.jpg";
+import summer from "../assets/summer-collection.jpg";
+import sale from "../assets/web_en_QAT_MEN_SALE_HP_1cta_121123.webp";
 
 function Products() {
   const prod = useLoaderData();
@@ -26,19 +29,19 @@ function Products() {
           )}
         >
           <img
-            src="src\assets\sale-electronics-banner-background-free-vector.jpg"
+            src={electronics}
             alt="image 1"
             style={{ height: "500px" }}
             className="h-full w-full object-cover"
           />
           <img
-            src="src\assets\summer-collection.jpg"
+            src={summer}
             alt="image 2"
             style={{ height: "500px" }}
             className="h-full w-full object-cover"
           />
           <img
-            src="src\assets\web_en_QAT_MEN_SALE_HP_1cta_121123.webp"
+            src={sale}
             alt="image 3"
             style={{ height: "500px" }}
             className="h-full w-full object-cover"

@@ -1,19 +1,50 @@
 import { useLoaderData } from "react-router-dom";
 import { add } from "./cartSlice";
 import { useDispatch } from "react-redux";
+import { Carousel } from "@material-tailwind/react";
 
 function Products() {
   const prod = useLoaderData();
   const dispatch = useDispatch();
-  // const [prod, setProd] = useState([]);
-  // useEffect(() => {
-  //   fetch("https://fakestoreapi.com/products")
-  //     .then((res) => res.json())
-  //     .then((result) => setProd(result));
-  // }, []);
 
   return (
     <>
+      <div>
+        <Carousel
+          navigation={({ setActiveIndex, activeIndex, length }) => (
+            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+              {new Array(length).fill("").map((_, i) => (
+                <span
+                  key={i}
+                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                    activeIndex === i ? "w-8 bg-gray-800" : "w-4 bg-gray-500"
+                  }`}
+                  onClick={() => setActiveIndex(i)}
+                />
+              ))}
+            </div>
+          )}
+        >
+          <img
+            src="src\assets\sale-electronics-banner-background-free-vector.jpg"
+            alt="image 1"
+            style={{ height: "500px" }}
+            className="h-full w-full object-cover"
+          />
+          <img
+            src="src\assets\summer-collection.jpg"
+            alt="image 2"
+            style={{ height: "500px" }}
+            className="h-full w-full object-cover"
+          />
+          <img
+            src="src\assets\web_en_QAT_MEN_SALE_HP_1cta_121123.webp"
+            alt="image 3"
+            style={{ height: "500px" }}
+            className="h-full w-full object-cover"
+          />
+        </Carousel>
+      </div>
       <div className="flex flex-wrap justify-around gap-4">
         {prod.map((item) => (
           <div

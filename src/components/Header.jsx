@@ -19,19 +19,13 @@ function Header() {
                 Products
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/cart"
-                className={({ isActive }) => (isActive ? "text-white" : "")}
-              >
-                Cart
-              </NavLink>
-            </li>
           </ul>
         </div>
         <ul className="flex space-x-4 ">
           <li className="text-white">
-            <ShoppingCartIcon /> {list.length}
+            <NavLink to="/cart">
+              <ShoppingCartIcon /> {list.length}
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import shopLogo from "../assets/Shopping-Bag-PNG.png";
 
 const LINKS = [
   {
@@ -22,11 +23,7 @@ export function Footer() {
     <footer className="bg-red-500 relative w-full">
       <div className="mt-10 pt-10 mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <img
-            src="src\assets\Shopping-Bag-PNG.png"
-            width="350"
-            alt="shopping-Bags"
-          />
+          <img src={shopLogo} width="350" alt="shopping-Bags" />
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>

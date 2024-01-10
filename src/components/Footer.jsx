@@ -20,7 +20,7 @@ const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="bg-red-500 relative w-full">
+    <footer className="bg-red-500 relative w-full bottom-0">
       <div className="mt-10 pt-10 mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <img src={shopLogo} width="350" alt="shopping-Bags" />

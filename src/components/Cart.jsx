@@ -1,11 +1,19 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { remove } from "./cartSlice";
+import { remove, increaseCount, decreaseCount } from "./cartSlice";
 function Cart() {
   const prod = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const calculateTotalPrice = (item) => {
+    return item.price * item.count;
+  };
+  if (prod.length === 0) {
+    return (
+      <p className="text-4xl text-center font-bold my-9">Your cart is empty.</p>
+    );
+  }
   return (
-    <div className="flex flex-wrap justify-around gap-4">
+    <div className="h-full max-w-[1000px] mx-auto flex flex-wrap justify-around gap-4">
       {prod.map((item) => (
         <div
           key={item.id}
@@ -18,8 +26,26 @@ function Cart() {
             <h5 className="truncate block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
               {item.title}
             </h5>
+            <p className="text-xs mt-2">Items: {item.count}</p>
+            {/* increase/ decrease buttons */}
+            <div className="flex mt-2">
+              <button
+                className="mr-2 px-2 py-1 border rounded-md"
+                onClick={() => dispatch(decreaseCount(item.id))}
+              >
+                -
+              </button>
+              <span>{item.count}</span>
+              <button
+                className="ml-2 px-2 py-1 border rounded-md"
+                onClick={() => dispatch(increaseCount(item.id))}
+              >
+                +
+              </button>
+            </div>
+            {/* =========== */}
             <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-              {item.price} $
+              {calculateTotalPrice(item).toFixed(2)} $
             </p>
           </div>
           <div className="p-6 pt-0">

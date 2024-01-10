@@ -1,5 +1,5 @@
 import { Typography } from "@material-tailwind/react";
-import shopLogo from "../assets/Shopping-Bag-PNG.png";
+import { shopLogo } from "../assets/Shopping-Bag-PNG.png";
 
 const LINKS = [
   {

@@ -31,19 +31,16 @@ function Products() {
           <img
             src={electronics}
             alt="image 1"
-            // style={{ height: "200px" }}
             className=" w-full object-cover h-[200px] sm:h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px]"
           />
           <img
             src={summer}
             alt="image 2"
-            // style={{ height: "200px" }}
             className=" w-full object-cover h-[200px] sm:h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px]"
           />
           <img
             src={sale}
             alt="image 3"
-            // style={{ height: "200px" }}
             className=" w-full object-cover h-[200px] sm:h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px]"
           />
         </Carousel>

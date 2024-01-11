@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { add } from "./cartSlice";
+import { add } from "./CartSlice";
 import { useDispatch } from "react-redux";
 import { Carousel } from "@material-tailwind/react";
 import electronics from "../assets/sale-electronics-banner-background-free-vector.jpg";

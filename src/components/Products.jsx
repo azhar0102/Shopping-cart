@@ -31,24 +31,24 @@ function Products() {
           <img
             src={electronics}
             alt="image 1"
-            style={{ height: "500px" }}
-            className="h-full w-full object-cover"
+            // style={{ height: "200px" }}
+            className=" w-full object-cover h-[200px] sm:h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px]"
           />
           <img
             src={summer}
             alt="image 2"
-            style={{ height: "500px" }}
-            className="h-full w-full object-cover"
+            // style={{ height: "200px" }}
+            className=" w-full object-cover h-[200px] sm:h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px]"
           />
           <img
             src={sale}
             alt="image 3"
-            style={{ height: "500px" }}
-            className="h-full w-full object-cover"
+            // style={{ height: "200px" }}
+            className=" w-full object-cover h-[200px] sm:h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px]"
           />
         </Carousel>
       </div>
-      <div className="flex flex-wrap justify-around gap-4">
+      <div className="flex flex-wrap justify-around gap-4 ">
         {prod.map((item) => (
           <div
             key={item.id}
